@@ -3,9 +3,8 @@ from snowflake.snowpark.functions import col
 import requests
 
 
-# Initialize Snowflake connection
-cnx = st.connection("snowflake")
-session = cnx.session()
+cnx=st.connection("snowflake")
+session=cnx.session()
 
 st.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
 st.write(
@@ -13,7 +12,6 @@ st.write(
     """
 )
 
-# Input: Name on order
 name_on_order = st.text_input("Name on Smoothie:")
 st.write("The name on your Smoothie will be:", name_on_order)
 
